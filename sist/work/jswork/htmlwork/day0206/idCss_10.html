@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #myimg1{
+            width: 400px;
+            height: 200px;
+            border-radius: 100px;
+            border: 3px solid rgb(28, 24, 38);
+        }
+        #myimg2{
+            position: relative;
+            left: 100px;
+            top: 30px;
+            width: 400px;
+        }
+        #myimg3{
+            position: absolute;
+            left: 1000px;
+            top: 150px;
+            width: 400px;
+        }
+        #myimg4{
+            width: 800px;
+            height: 400px;
+            background-image: url(../image/Top_Gun_slow.gif);
+        }
+        /* 마우스 클릭 시 이미지 변경*/
+        #myimg4:active{
+            background-image: url(../image/01.png);
+        }
+        #myimg4:hover{
+            background-image: url(../image/Top_Gun_-_Maverick_logo.svg.png);
+            background-size: 150px 150px;
+        }
+    </style>
+</head>
+<body>
+    <img src="../image/Top_Gun_1.gif" alt="이미지 없음" title="탑건1" id="myimg1">
+    <img src="../image/Top_Gun_2.webp" alt="이미지 없음" title="탑건2" id="myimg2">
+    <img src="../image/Top_Gun_3.gif" alt="이미지 없음" title="탑건3" id="myimg3">
+    <div id="myimg4"></div>
+</body>
+</html>

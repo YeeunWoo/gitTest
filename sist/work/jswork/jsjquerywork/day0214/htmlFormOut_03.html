@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            border: 2px solid gray;
+            width: 500px;
+            border-collapse: collapse;
+        }
+
+        tr,
+        th,
+        td {
+            border: 1px solid gray;
+        }
+    </style>
+    <script>
+        function goProject(project) {
+            document.getElementById("outproject").innerText="주제: "+project;
+        }
+        function goWrite(weight) {
+            document.getElementById("outweight").innerText=weight;
+        }
+        function goColor(){
+            outcol.style.background=frm.col.value;
+        }
+        function goBirth(){
+            document.getElementById("outbirth").innerText="생일: "+frm.day.value;
+        }
+    </script>
+</head>
+
+<body>
+    <form action="#" name="frm">
+        <table>
+            <caption><b>radio check</b></caption>
+            <tr height="39">
+                <td>
+                    <b>최종학력</b>
+                    <input type="radio" name="grade" value="고등학교">고등학교&nbsp;
+                    <input type="radio" name="grade" value="전문대학교">전문대학교&nbsp;
+                    <input type="radio" name="grade" value="대학원">대학원&nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b>프로그램 언어</b>
+                    <input type="checkbox" name="lang" value="JAVA">JAVA&nbsp;
+                    <input type="checkbox" name="lang" value="JSP">JSP&nbsp;
+                    <input type="checkbox" name="lang" value="HTML">HTML&nbsp;
+                    <input type="checkbox" name="lang" value="JQuery">JQuery&nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b>세미프로젝트 주제</b>
+                    <select name="project" onchange="goProject(this.value)">
+                        <option value="영화예매">영화예매</option>
+                        <option value="휴게소" selected>휴게소</option>
+                        <option value="여행지소개" selected>여행지소개</option>
+                    </select>
+                    <span id="outproject"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b>키</b>
+                    <input type="number" name="height" value="160" min="140" max="210" step="5">cm
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b>몸무게</b>
+                    <input type="range" name="weight" min="50" max="100" setp="3" value="60"
+                        onchange="goWrite(this.value)"><span id="outweight">0</span>kg
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b id="outcol">색</b>
+                    <input type="color" name="col" onchange="goColor()">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b>생일</b>
+                    <input type="date" name="day" value="2000-01-01" onchange="goBirth()">
+                    <span id="outbirth"></span>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

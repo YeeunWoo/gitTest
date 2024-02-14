@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 50px;
+        }
+    </style>
+    <script>
+        function test() {
+            alert("경고창은\n<br>태그가 안 먹힙니다");
+        }
+        function test2() {
+            //out.innerHTML="출력합니다";
+            var str = "<font color='red' size='5'>HTML요소에 출력합니다</font>";
+            out.innerHTML = str;
+
+        }
+    </script>
+</head>
+
+<body>
+    <input type="button" value="여기를 누르세요" onclick="test()">
+    <br>
+    <div id="out"></div>
+    <input type="button" value="html요소에 출력하기" onclick="test2()">
+    <br>
+    <hr>
+    <img src="../image/05.png" onmouseover="this.src='../image/01.png'"
+    onmouseout="this.src='../image/02.png'">
+</body>
+
+</html>

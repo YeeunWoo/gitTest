@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            border: 2px solid gray;
+            width: 500px;
+            border-collapse: collapse;
+        }
+
+        tr, th, td{
+            border: 1px solid gray;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption><b>radio check</b></caption>
+        <tr height="39">
+            <td>
+                <b>최종학력</b>
+                <input type="radio" name="grade" value="고등학교">고등학교&nbsp;
+                <input type="radio" name="grade" value="전문대학교">전문대학교&nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b>프로그램 언어</b>
+                <input type="checkbox" name="lang" value="JAVA">JAVA&nbsp;
+                <input type="checkbox" name="lang" value="JSP">JSP&nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b>이미지 선택</b>
+                <input type="file">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b>세미프로젝트 주제</b>
+                <select>
+                    <option value="영화예매">영화예매</option>
+                    <option value="휴게소" selected>휴게소</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b>키</b>
+                <input type="number" value="160" min="140" max="210" step="5">cm
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b>색</b>
+                <input type="color">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b>생일</b>
+                <input type="date">
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

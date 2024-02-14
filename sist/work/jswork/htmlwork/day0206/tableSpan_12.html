@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tb2{
+            width: 400px;
+            border: 1px solid gray;
+            border-collapse: collapse;
+        }
+        .tb2 td,.tb2 th{
+            border: 1px solid green;
+        }
+    </style>
+</head>
+<body>
+    <table border="1" width="300">
+        <caption>[표1]</caption>
+        <tr height="30">
+            <td align="center">1</td>
+            <td align="center">2</td>
+            <td align="center">3</td>
+        </tr>
+        
+        <tr align="center" height="50">
+            <td colspan="3">
+                3칸합침
+            </td>
+        </tr>
+        
+        
+    </table>
+    <hr>
+        <table class="tb2">
+            <caption>[표2]</caption>
+            <tr height="40">
+                <th>사진</th>
+                <th>이름</th>
+                <th>주소</th>
+                <th>핸드폰</th>
+            </tr>
+            <tr>
+                <td rowspan="3" align="center">
+                    <img src="../image/Top_Gun_2.webp" width="80">
+                </td>
+                <td>톰 크루즈</td><td>충남 아산시</td><td>010-1234-5678</td>
+            </tr>
+            <tr>
+                <td>김수경</td><td>서울 강남구</td><td>010-1234-4478</td>
+            </tr>
+            <tr>
+                <td>손흥민</td><td>부산 서귀포</td><td>010-3333-5678</td>
+            </tr>
+            
+        </table>
+        <hr>
+        <table border="1">
+            <caption>[표3]</caption>
+            <tr>
+                <td rowspan="3">111</td><td colspan="3">222</td>
+            </tr>
+            <tr><td colspan="3">333</td></tr>
+            <tr><td colspan="2">444</td><td rowspan="2">555</td></tr>
+            <tr><td colspan="3">666</td></tr>
+        </table>
+        <hr>
+        <table border="1">
+            <caption>[표4]</caption>
+            <tr>
+                <td rowspan="3">최민수</td>
+                <td rowspan="3"><img src="../image/Top_Gun_slow.gif" height="100"></td>
+                <td>010-1234-5678</td>
+            </tr>
+            <tr>
+                <td>경제학과</td>
+            </tr>
+            <tr>
+                <td>4학년</td>
+            </tr>
+        </table>
+            
+</body>
+</html>

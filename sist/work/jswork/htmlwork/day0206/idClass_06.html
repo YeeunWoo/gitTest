@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* class: 동시에 여러 군데 사용(.으로 만듦)
+            id: 한 군데 사용(#으로 만듦) */
+        .aaa{
+            color: rgb(21, 66, 67);
+        }
+        div.bbb{
+            color: rgb(109, 15, 15);
+            font-size: 50px;
+            width: 200px;
+            height: 100px;
+            border: 1px solid gray;
+        }
+        #sist{
+            position: absolute;
+            top: 400px;
+            left: 200px;
+            width: 200px;
+            height: 100px;
+            font-size: 20px;
+            border: 5px dotted green;
+            padding-left: 20px;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div style="color: rgb(255, 255, 255); font-size: 30px; background-color: slategray;
+    width: 200px; height: 150px;">
+    안녕하세요.
+    </div>
+    <div style="position: absolute; top: 400px; left: 700px;
+    width: 200px; height: 150px; border: 3px dotted green;">
+        오늘은 즐거운... 화요일
+    </div>
+    <div class="aaa">
+        hello...
+    </div>
+    <div class="bbb">
+        햄버거
+    </div>
+    <div class="ccc">
+        12시 50분
+    </div>
+    <b class="aaa">Bold</b>
+    <div id="sist">쌍용 교육 4강의장</div>
+</body>
+</html>
