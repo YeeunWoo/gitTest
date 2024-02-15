@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Document</title>
+    <script>
+        // var imgArr = ["../image/01.png",
+        //     "../image/02.png",
+        //     "../image/03.png",
+        //     "../image/04.png",
+        //     "../image/05.png"]
+
+        // window.onload = function () {
+        //     document.getElementById("btn").onclick = function () {
+        //         var a = prompt("인덱스 번호를 입력해주세요");
+
+        //         if(a>=0&&a<5){
+        //             document.getElementById("result").innerHTML = '<img src='+imgArr[a]+'>';
+        //         } else
+        //         document.getElementById("result").innerHTML = "<h3>해당 번호의 이미지는 없습니다</h3>";
+        //     }
+        // }
+
+        var imgArr = ["<img src='../image/01.png'>'",
+            "<img src='../image/02.png'>'",
+            "<img src='../image/03.png'>'",
+            "<img src='../image/04.png'>'",
+            "<img src='../image/05.png'>'"]
+
+        window.onload = function () {
+            document.getElementById("btn").onclick = function () {
+
+                var a = prompt("인덱스 번호를 입력해주세요");
+
+                if (a >= 0 && a < 5) {
+                    document.getElementById("result").innerHTML = imgArr[a];
+                } else
+                    document.getElementById("result").innerHTML = "<h3>해당 번호의 이미지는 없습니다</h3>";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <!-- 이미지출력이라는 버튼을 만들고 버튼을 클릭하면 prompt창이 나온다
+    창에는 인덱스 번호를 입력해주세요라고 출력한 후 0이라고 입력 시 0번 이미지가 나온다
+    총 5개의 이미지를 imgArr에 배열형태로 넣고 자유로운 이미지를 넣어줍니다
+    (단 배열인덱스에 없는 값 입력 시 "해당 번호의 이미지는 없습니다" 출력)
+    이미지, 버튼은 부트스트랩 이용-->
+    <input type="button" value="이미지출력" class="btn btn-outline-success" id="btn">
+    <br>
+    <div id="result"></div>
+</body>
+
+</html>
