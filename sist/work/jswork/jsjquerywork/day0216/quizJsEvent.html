@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>for문 이용해서 body에 이미지 출력하기</h3>
+    <script>
+        for (var i = 1; i <= 5; i++) {
+            document.write("<img src='../image/shoppingmall/" + i + ".jpg'>");
+        }
+    </script>
+    <h3>
+        img의 id를 img1으로 주고 그 아이디로 이벤트 추가
+        사진에 마우스 올리면 10번째 사진으로 바뀌고 클릭하면 11번째 사진으로 바뀌며 마우스 벗어나면
+        원래 사진으로 변경되도록 이벤트 주기
+    </h3>
+    <img src="../image/01.png" id="img1">
+    <script>
+        window.onload = function () {
+            var img = document.getElementById("img1");
+            img.onmouseover = function () {
+                img.setAttribute("src", "../image/02.png");
+            }
+            img.onclick = function () {
+                img.setAttribute("src", "../image/03.png");
+            }
+            img.onmouseout = function () {
+                img.setAttribute("src", "../image/01.png");
+            }
+        }
+    </script>
+
+    <h3>
+        버튼을 하나 만들고 버튼을 클릭 시 prompt로 이름을 입력 받아서 div태그 안에
+        '내 이름은 홍길동입니다' 출력(div class='iyou'라고 준 후 css로 스타일 적용해 볼 것)
+    </h3>
+    <button id="btn">버튼</button>
+    <script>
+        window.onload = function(){
+            document.getElementById("btn").onclick = function(){
+                var name = prompt("이름 입력");
+                var iyou = document.querySelector('.iyou');
+                iyou.innerHTML = "<h3>내 이름은 "+ name + "입니다</h3>";
+            }
+        }
+    </script>
+    <div class="iyou"></div>
+
+</body>
+
+</html>

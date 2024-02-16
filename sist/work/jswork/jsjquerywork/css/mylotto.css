@@ -13,4 +13,5 @@ div.lotto{
     box-shadow: 5px 5px 5px gray;
     font-size: 2.5em;
     color: white;
+    float: left;
 }
