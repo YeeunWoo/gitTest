@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Hi+Melody&family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@100..900&display=swap">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Document</title>
+    <style>
+        .bg0{
+            background-color: orange;
+            color: blue;
+        }
+        .bg1{
+            background-color: rgb(0, 0, 255);
+            color: rgb(176, 176, 176);
+        }
+        .bg2{
+            background-color: rgb(255, 0, 195);
+            color: rgb(0, 102, 61);
+        }
+        .bg3{
+            background-color: rgb(0, 225, 255);
+            color: rgb(63, 63, 63);
+        }
+    </style>
+</head>
+
+<body>
+    <b></b><b></b><b></b><b></b><b></b>
+
+    <script>
+        //b태그 개수만큼 자동 반복
+        //i는 index: 0부터
+        //element는 인덱스에 해당하는 b태그(생략가능)
+        $("b").each(function (i, ele) {
+            //$(ele).text(i);
+            $(this).text(i);
+        })
+    </script>
+
+    <hr>
+    <ul>
+        <li>마라탕</li>
+        <li>뿌링클</li>
+        <li>라볶이</li>
+        <li>솥뚜껑 삼겹살</li>
+    </ul>
+
+    <script>
+        $("ul li").each(function(idx){
+            $(this).addClass("bg"+idx);
+        })
+
+        $("ul li").mouseover(function(){
+            //li태그 뒤 b 태그 추가
+            $(this).after("<b>****</b>");
+        })
+
+        
+    </script>
+</body>
+
+</html>
