@@ -1,0 +1,22 @@
+[
+	{
+		"num": 10,
+		"celeb": "여진구",
+		"photo": "../image/01.png"
+	},
+	{
+		"num": 20,
+		"celeb": "김태희",
+		"photo": "../image/02.png"
+	},
+	{
+		"num": 30,
+		"celeb": "신민아",
+		"photo": "../image/03.png"
+	},
+	{
+		"num": 40,
+		"celeb": "유아인",
+		"photo": "../image/04.png"
+	}
+]

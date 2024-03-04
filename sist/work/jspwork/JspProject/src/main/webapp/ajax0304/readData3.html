@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+	rel="stylesheet">
+<link
+	href="https://fonts.googleapis.com/css2?family=Dongle&family=Gaegu&family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR&display=swap"
+	rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+<title>Insert title here</title>
+<script type="text/javascript">
+	$(function(){
+		//xml2
+		$("#btn1").click(function(){
+			$.ajax({
+				type:"get",
+				url:"data3.xml",
+				dataType:"xml",
+				success:function(res){
+					var s = "";
+					//i는 0부터 ele는 각 태그값. 여기서 stu각각이 ele로 넘어옴
+					$(res).find("stu").each(function(i, ele){
+						var n = $(ele);
+						s += "<div class='alert alert-info' style='width:400px'>";
+						s += "idx: " + i + "<br>";
+						s += "이름: " + n.attr("name") + ", ";
+						s += "java: " + n.find("java").text();
+						s += "spring: " + n.find("spring").text()+",";
+						s += "ajax: " + n.find("ajax").text();
+						s += "</div>";
+					});
+					$("#result").html(s);
+				}
+			})
+		});
+		//json2
+		$("#btn2").click(function(){
+			$.ajax({
+				type:"get",
+				url:"data3.json",
+				dataType:"json",
+				success:function(res){
+					var s = "";
+					
+					$.each(res,function(i, item){
+						s += "<div class='alert alert-danger' style='width:400px'>";
+						s += "index: " + i + "<br>";
+						s += "name: " + item.name+"<br>";
+						s += "city: " + item.city+"<br>";
+						s += "hp: " + item.hp+"<br>";
+						s += "detailaddr: " + (item.detailaddr==null?"상세주소없음":item.detailaddr) + "<br>";
+						s += "</div>";
+					});
+					$("#result").html(s);
+				}
+			})
+		});
+		//json2
+		$("#btn3").click(function(){
+			var s = "";
+			$.ajax({
+				type:"get",
+				url:"multidata3.json",
+				dataType:"json",
+				success:function(res){
+					$.each(res,function(i, item){
+						s += "<div class='alert alert-success' style='width:400px'>";
+						s += "index: " + i + "<br>";
+						s += "name: " + item.name+"<br>";
+						s += "hobby: ";
+						if(item.hobby==null)
+							s+="취미없음<br>";
+						else{
+							$.each(item.hobby,function(i,h){
+								s += "["+h+"]";				
+							});
+							s += "<br>";
+						}
+						s += "hp: ";
+						if(item.hp==null)
+							s+="번호없음<br>";
+						else{		
+							s += item.hp+"<br>";
+						}
+						s += "addr: " + item.addr+"<br>";						
+						s += "</div>";
+					});
+					$("#result").html(s);
+				}
+			})
+		});
+		
+	})
+</script>
+</head>
+<body>
+	<button type="button" class="btn btn-outline-info" id="btn1">data3.xml읽기</button>
+	<button type="button" class="btn btn-outline-danger" id="btn2">data3.json읽기</button>
+	<button type="button" class="btn btn-outline-success" id="btn3">multidata3.json읽기</button>
+	<br><br>
+	<div id="result">결과</div>
+	
+</body>
+</html>
